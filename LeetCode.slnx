@@ -1,3 +1,7 @@
 <Solution>
-  <Project Path="TwoSum/TwoSum.csproj" />
+  <Folder Name="/Solution Items/">
+    <File Path=".gitignore" />
+  </Folder>
+  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/ContainerWater/ContainerWater.csproj" />
+  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/TwoSum/TwoSum.csproj" />
 </Solution>
