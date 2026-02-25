@@ -1,33 +1,31 @@
-﻿public class Solution
+﻿namespace TwoSum
 {
-    public int[] TwoSum(int[] nums, int target)
+    public class Solution
     {
-        Dictionary<int, int> mappedTarget = new Dictionary<int, int>();
-
-        for (int i = 0; i < nums.Length; i++)
+        public int[] TwoSum(int[] nums, int target)
         {
-            int complement = target - nums[i];
+            Dictionary<int, int> mappedTarget = new Dictionary<int, int>();
 
-            if (mappedTarget.ContainsKey(complement))
+            for (int i = 0; i < nums.Length; i++)
             {
-                // Use the indexer to get the value, then return the pair
-                return new int[] { mappedTarget[complement], i };
+                int complement = target - nums[i];
+
+                if (mappedTarget.ContainsKey(complement))
+                {
+                    // Use the indexer to get the value, then return the pair
+                    return new int[] { mappedTarget[complement], i };
+                }
+
+                // Add the current number and its index if not found
+                if (!mappedTarget.ContainsKey(nums[i]))
+                {
+                    mappedTarget.Add(nums[i], i);
+                }
             }
 
-            // Add the current number and its index if not found
-            if (!mappedTarget.ContainsKey(nums[i]))
-            {
-                mappedTarget.Add(nums[i], i);
-            }
+            // Return this AFTER the loop finishes without a match
+            return Array.Empty<int>();
         }
-
-        // Return this AFTER the loop finishes without a match
-        return Array.Empty<int>();
     }
 
-    static void Main(string[] args)
-    {
-        Solution solution = new Solution();
-        Console.WriteLine(string.Join(", ", solution.TwoSum(new int[] { 2, 3, 4, 3, 2 }, 4)));
-    }
 }

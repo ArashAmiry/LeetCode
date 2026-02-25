@@ -1,39 +1,37 @@
-﻿public class Solution
+﻿namespace ContainerWater
 {
-    public int MaxArea(int[] height)
+    public class Solution
     {
-        int maxArea = 0;
-        int leftPointer = 0;
-        int rightPointer = height.Length - 1;
-
-        while (leftPointer < rightPointer)
+        public int MaxArea(int[] height)
         {
+            int maxArea = 0;
+            int leftPointer = 0;
+            int rightPointer = height.Length - 1;
 
-                int minHeight =  Math.Min(height[leftPointer], height[rightPointer]);
+            while (leftPointer < rightPointer)
+            {
+
+                int minHeight = Math.Min(height[leftPointer], height[rightPointer]);
                 int width = rightPointer - leftPointer;
                 int currentArea = width * minHeight;
 
-                if(currentArea > maxArea)
+                if (currentArea > maxArea)
                 {
                     maxArea = currentArea;
                 }
 
-            if (height[leftPointer] <= height[rightPointer])
-            {
-                leftPointer++;
+                if (height[leftPointer] <= height[rightPointer])
+                {
+                    leftPointer++;
+                }
+                else
+                {
+                    rightPointer--;
+                }
             }
-            else
-            {
-                rightPointer--;
-            }
+
+            return maxArea;
         }
 
-        return maxArea;
-    }
-
-    static void Main(string[] args)
-    {
-        Solution solution = new Solution();
-        Console.WriteLine(string.Join(", ", solution.MaxArea(new int[] { 2, 3, 4, 3, 2 })));
     }
 }
