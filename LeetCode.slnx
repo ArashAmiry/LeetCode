@@ -2,8 +2,9 @@
   <Folder Name="/Solution Items/">
     <File Path=".gitignore" />
   </Folder>
-  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/3Sum/3Sum.csproj" Id="6216b144-33de-4161-97e5-919517bc3948" />
-  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/ContainerWater/ContainerWater.csproj" />
-  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/Solution/Solution.csproj" Id="13516a1f-7301-4dee-bf24-f0344b4e4241" />
-  <Project Path="../../../../../../../../BankAccountTraining/LeetCode/TwoSum/TwoSum.csproj" />
+  <Project Path="ContainerWater/ContainerWater.csproj" />
+  <Project Path="InsertPosition/InsertPosition.csproj" Id="473dce11-fa2f-4575-b20e-ceff0a801b8b" />
+  <Project Path="PlusOne/PlusOne.csproj" Id="19899b7d-4053-409d-a616-1c7232de8797" />
+  <Project Path="Solution/Solution.csproj" Id="13516a1f-7301-4dee-bf24-f0344b4e4241" />
+  <Project Path="TwoSum/TwoSum.csproj" />
 </Solution>
